@@ -1,0 +1,450 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Text selection styles */
+*::selection {
+    color: #fff;
+    background-color: black;
+}
+
+/* Set default font family */
+body {
+    font-family: Matter, sans-serif;
+}
+
+/* Set HTML and body dimensions */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main container */
+#main {
+    width: 100%;
+    background-color: #fff;
+}
+
+/* Home Section */
+#home {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Navigation */
+#nav img {
+    width: 100px;
+}
+
+#nav {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#right {
+    font-weight: 500;
+    display: flex;
+    gap: 2vh;
+    font-size: large;
+}
+
+#nav i {
+    margin-top: 2px;
+}
+
+/* Home main content */
+#homemain {
+    width: 100%;
+    padding: 12.1vw 10vw;
+}
+
+#homemain h1 {
+    font-weight: 400;
+    font-size: 1.6vw;
+    letter-spacing: -0.1vw;
+}
+
+#homeheading {
+    display: flex;
+    gap: 40px;
+}
+
+#homeheading h1 {
+    font-size: 8vw;
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px #535050;
+}
+
+#homeheading h1:hover {
+    color: black;
+}
+
+/* Home last section */
+#homelast {
+    padding: 5vw 10vw;
+}
+
+#homelast p {
+    font-size: 1.5vw;
+    font-weight: 500;
+    width: 50%;
+}
+
+#homelast p::selection {
+    color: #fff;
+    background-color: black;
+}
+
+/* Featured projects section */
+#featured {
+    padding: 10vw 15vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.fheading h1 {
+    font-size: 4vw;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.fheading h1:nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+}
+
+#fimages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vw;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Featured Left (fleft) */
+#fleft {
+    overflow: hidden; /* Hide the scrollbar */
+    width: 45%;
+    height: inherit;
+    position: relative;
+}
+
+.fleftelem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+}
+
+#featured .fleftelem h1 {
+    font-size: 2.5vw;
+    line-height: 1;
+    text-transform: capitalize;
+    margin: 2vw 0vw;
+    font-weight: 400;
+}
+
+#featured .fleftelem h4 {
+    opacity: 0.5;
+}
+
+#featured .fleftelem h3 {
+    font-size: 1.7vw;
+    font-weight: 400;
+}
+
+/* Featured Right (fright) */
+#fright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 45%;
+    height: inherit;
+    position: relative;
+    overflow: hidden; /* Hide overflowing images */
+}
+
+#fright .images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: flex-end; /* Align images to the right */
+}
+
+#fright .images img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0; /* Start with images hidden */
+    transition: opacity 0.5s ease; /* Add a smooth opacity transition */
+}
+
+/* Button Div */
+.btndiv {
+    margin: 3vw 0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btndiv button {
+    padding: 1.3vw 2vw;
+    border-radius: 100px;
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 1vw;
+    background-color: #fff;
+    letter-spacing: -0.05vw;
+    font-weight: 600;
+}
+
+/* Development and Design Resources Section */
+#dev {
+    width: 100%;
+    padding: 5vw 15vw;
+}
+
+#dev h1 {
+    font-size: 4vw;
+    width: 60%;
+    line-height: 1;
+}
+
+#dev p {
+    font-size: 1.5vw;
+    opacity: 0.5;
+    width: 60%;
+    margin-top: 2vw;
+}
+
+/* Slides Section */
+#slides {
+    padding: 3vw 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide {
+    width: 30%;
+}
+
+.slide .img {
+    width: 100%;
+    height: 200px;
+}
+
+.slide .img img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.slide .tag {
+    margin: 1vw 0vw;
+    padding: 1vw 1vw;
+    background-color: #ebebeb;
+    width: fit-content;
+    border-radius: 100px;
+}
+
+/* Media Queries for Tablet and Mobile */
+@media screen and (max-width: 1024px) {
+    /* Adjust styles for tablets and smaller screens here */
+    #nav img {
+        width: 60px;
+    }
+    
+    #nav {
+        padding: 10px;
+    }
+    
+    #homemain h1 {
+        font-size: 3.5vw;
+        letter-spacing: -0.2vw;
+    }
+    
+    #homeheading h1 {
+        font-size: 15vw;
+        letter-spacing: -5px;
+    }
+    
+    #homelast p {
+        font-size: 3vw;
+    }
+    
+    .fheading h1 {
+        font-size: 8vw;
+    }
+    
+    #featured .fleftelem h1 {
+        font-size: 3vw;
+    }
+    
+    #featured .fleftelem h3 {
+        font-size: 2vw;
+    }
+    
+    .btndiv button {
+        padding: 1.3vw 2vw;
+        font-size: 2vw;
+    }
+    
+    #dev h1 {
+        font-size: 8vw;
+    }
+    
+    #dev p {
+        font-size: 3vw;
+    }
+    
+    .slide {
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    #nav img {
+        width: 40px;
+    }
+    
+    #homemain h1 {
+        font-size: 3vw;
+        letter-spacing: -0.2vw;
+    }
+    
+    #homeheading h1 {
+        font-size: 12vw;
+        letter-spacing: -5px;
+    }
+    
+    #homelast p {
+        font-size: 2.5vw;
+        width: 70%;
+    }
+    
+    .fheading h1 {
+        font-size: 6vw;
+    }
+    
+    #featured .fleftelem h1 {
+        font-size: 2vw;
+    }
+    
+    #featured .fleftelem h3 {
+        font-size: 1.5vw;
+    }
+    
+    .btndiv button {
+        padding: 1.2vw 1.5vw;
+        font-size: 1.5vw;
+    }
+    
+    #dev h1 {
+        font-size: 6vw;
+    }
+    
+    #dev p {
+        font-size: 2vw;
+        width: 70%;
+    }
+    
+    .slide {
+        max-width: calc(100% - 20px);
+    }
+}
+
+/* Media Queries for Mobile Phones */
+@media screen and (max-width: 480px) {
+    #nav img {
+        width: 30px;
+    }
+    
+    #homemain h1 {
+        font-size: 2.5vw;
+        letter-spacing: -0.2vw;
+    }
+    
+    #homeheading h1 {
+        font-size: 10vw;
+        letter-spacing: -3px;
+    }
+    
+    #homelast p {
+        font-size: 2vw;
+        width: 80%;
+    }
+    
+    .fheading h1 {
+        font-size: 4vw;
+    }
+    
+    #featured .fleftelem h1 {
+        font-size: 1.5vw;
+    }
+    
+    #featured .fleftelem h3 {
+        font-size: 1vw;
+    }
+    
+    .btndiv button {
+        padding: 1vw 1vw;
+        font-size: 1vw;
+    }
+    
+    #dev h1 {
+        font-size: 4vw;
+    }
+    
+    #dev p {
+        font-size: 1.2vw;
+        width: 80%;
+    }
+    
+    .slide {
+        max-width: calc(100% - 20px);
+    }
+}
+
+
+/* Button Div */
+.btndiv {
+    margin: 3vw 0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.btndiv button {
+    padding: 1.3vw 2vw;
+    border-radius: 100px;
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 1vw;
+    background-color: #fff;
+    letter-spacing: -0.05vw;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.btndiv button:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    color: #161616; /* Change text color on hover */
+}
